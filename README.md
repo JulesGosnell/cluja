@@ -4,10 +4,10 @@ CLUJA
 Let's try using Clojure 1.4 and Rootbeer to map a pure function over a sequence in parallel on a CUDA GPU.
 
 Functional languages and pure functions lend themselves to simple parallelism.
-GPUs contain large numbers of simple Cores.
+GPUs contain large numbers of simple cores.
 
-What doors would be opened if Clojure developers were able to run the
-parallel parts of their programs on their GPU ?
+What doors would be opened if Clojure developers were able to
+transparently run the parallel parts of their programs on their GPU ?
 
 Is this practical ?
 
