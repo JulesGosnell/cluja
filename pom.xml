@@ -152,7 +152,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-	<version>2.0.2</version> <!--TODO-->
+	<version>2.3</version> <!--TODO-->
         <configuration>
 	  <source>${java.version}</source>
           <target>${java.version}</target>
