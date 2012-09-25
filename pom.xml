@@ -136,7 +136,7 @@
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
 	<artifactId>maven-jar-plugin</artifactId>
-	<version>2.3.2</version>
+	<version>2.4</version>
 	<configuration>
 	  <archive>
 	    <manifest>
@@ -154,7 +154,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-	<version>2.3</version> <!--TODO-->
+	<version>2.5.1</version>
         <configuration>
 	  <source>${java.version}</source>
           <target>${java.version}</target>
@@ -164,15 +164,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-eclipse-plugin</artifactId>
-	<version>2.7</version>	<!--TODO-->
-        <configuration>
-	  <ajdtVersion>none</ajdtVersion>  <!-- prevent aspectj jars from being stripped out of Eclipse classpath -->
-        </configuration>
+	<version>2.9</version>
       </plugin>
 
       <plugin>
 	<artifactId>maven-resources-plugin</artifactId>
-	<version>2.4.2</version> <!--TODO-->
+	<version>2.6</version>
 	<executions>
 	  <execution>
 	    <id>copy-clojure-src</id>
@@ -247,7 +244,7 @@
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-antrun-plugin</artifactId>
-	<version>1.7</version>	<!--TODO-->
+	<version>1.7</version>
 	<dependencies>
 	  <dependency>
 	    <groupId>edu.syr.pcpratts</groupId>
