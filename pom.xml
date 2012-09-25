@@ -18,7 +18,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <java.version>1.7</java.version>
     <clojure.version>1.4.0</clojure.version>
-    <clojure-maven-plugin.version>1.3.10</clojure-maven-plugin.version> <!--TODO-->
+    <clojure-maven-plugin.version>1.3.12</clojure-maven-plugin.version>
     <rootbeer.version>1.x-SNAPSHOT</rootbeer.version>
     <rootbeer.dir>${project.basedir}/target/rootbeer</rootbeer.dir>
     <rootbeer.jar>rootbeer-${rootbeer.version}-uber.jar</rootbeer.jar>
