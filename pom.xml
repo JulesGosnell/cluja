@@ -19,7 +19,7 @@
     <java.version>1.7</java.version>
     <clojure.version>1.4.0</clojure.version>
     <clojure-maven-plugin.version>1.3.10</clojure-maven-plugin.version> <!--TODO-->
-    <rootbeer.version>1.0.10-SNAPSHOT</rootbeer.version>
+    <rootbeer.version>1.x-SNAPSHOT</rootbeer.version>
     <rootbeer.dir>${project.basedir}/target/rootbeer</rootbeer.dir>
     <rootbeer.jar>rootbeer-${rootbeer.version}-uber.jar</rootbeer.jar>
     <cuda.jar>cluja-${project.version}-cuda.jar</cuda.jar>
@@ -29,18 +29,14 @@
     <repository>
       <id>ouroboros</id>
       <name>Jules' Home Repository</name>
-      <url>http://ouroboros.dyndns-free.com/repo/libs-snapshots-local</url>
+      <url>http://ouroboros.dyndns-free.com/maven/libs-snapshot-local</url>
     </repository>
   </distributionManagement>
 
   <repositories>
     <repository>
-      <id>ouroboros-cache</id>
-      <url>http://ouroboros.dyndns-free.com/repo/repos</url>
-    </repository>
-    <repository>
-      <id>ouroboros-ext</id>
-      <url>http://ouroboros.dyndns-free.com/repo/ext-releases-local</url>
+      <id>ouroboros</id>
+      <url>http://ouroboros.dyndns-free.com/maven/repo</url>
     </repository>
     <repository>  <!-- clojure, clojure-contrib: nightly -->
       <id>clojure-releases</id>
@@ -51,6 +47,13 @@
       <url>http://clojars.org/repo</url>
     </repository>
   </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>ouroboros</id>
+      <url>http://ouroboros.dyndns-free.com/maven/repo</url>
+    </pluginRepository>
+  </pluginRepositories>
 
   <developers>
     <developer>
@@ -82,7 +85,6 @@
       <groupId>edu.syr.pcpratts</groupId>
       <artifactId>rootbeer</artifactId>
       <version>${rootbeer.version}</version>
-      <!-- <classifier>uber</classifier> -->
     </dependency>
   </dependencies>
 
@@ -245,7 +247,15 @@
       <plugin>
 	<groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-antrun-plugin</artifactId>
-	<version>1.3</version>	<!--TODO-->
+	<version>1.7</version>	<!--TODO-->
+	<dependencies>
+	  <dependency>
+	    <groupId>edu.syr.pcpratts</groupId>
+	    <artifactId>rootbeer</artifactId>
+	    <version>${rootbeer.version}</version>
+	    <classifier>uber</classifier>
+	  </dependency>
+	</dependencies>
         <executions>
           <execution>
             <id>rootbeer-compile</id>
@@ -261,7 +271,7 @@
 		    dir="${rootbeer.dir}"
 		    jar="${rootbeer.dir}/${rootbeer.jar}"
 		    fork="true"
-		    failonerror="true"
+		    failonerror="false"
 		    maxmemory="2g"
 		    >
                   <arg value="${project.basedir}/target/cluja-${project.version}-uber.jar"/>
@@ -271,7 +281,7 @@
 		    dir="${rootbeer.dir}"
 		    jar="${project.basedir}/target/${cuda.jar}"
 		    fork="true"
-		    failonerror="true"
+		    failonerror="false"
 		    maxmemory="1g"
 		    />
               </tasks>
