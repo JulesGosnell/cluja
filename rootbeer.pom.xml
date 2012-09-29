@@ -158,7 +158,25 @@
         <artifactId>maven-eclipse-plugin</artifactId>
 	<version>2.9</version>
       </plugin>
+      <plugin>
+	<groupId>org.apache.maven.plugins</groupId>
+	<artifactId>maven-javadoc-plugin</artifactId>
+	<version>2.6.1</version>
+        <configuration>
+	  <source>${java.version}</source>
+          <target>${java.version}</target>
+          <excludes>
+            <exclude>**/testcases/**</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
+
+
+  <reporting>
+    <plugins>
+    </plugins>
+  </reporting>
 
 </project>
