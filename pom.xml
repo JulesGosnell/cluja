@@ -35,6 +35,10 @@
 
   <repositories>
     <repository>
+      <id>Maven Central Repository</id>
+      <url>http://repo1.maven.org/maven2/</url>
+    </repository>
+    <repository>
       <id>ouroboros</id>
       <url>http://ouroboros.dyndns-free.com/artifactory/repo</url>
     </repository>
