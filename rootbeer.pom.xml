@@ -29,7 +29,7 @@
     <repository>
       <id>ouroboros</id>
       <name>Jules' Home Repository</name>
-      <url>http://ouroboros.dyndns-free.com/maven/libs-snapshot-local</url>
+      <url>http://ouroboros.dyndns-free.com/artifactory/libs-snapshot-local</url>
     </repository>
   </distributionManagement>
 
