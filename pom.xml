@@ -29,14 +29,14 @@
     <repository>
       <id>ouroboros</id>
       <name>Jules' Home Repository</name>
-      <url>http://ouroboros.dyndns-free.com/maven/libs-snapshot-local</url>
+      <url>http://ouroboros.dyndns-free.com/artifactory/libs-snapshot-local</url>
     </repository>
   </distributionManagement>
 
   <repositories>
     <repository>
       <id>ouroboros</id>
-      <url>http://ouroboros.dyndns-free.com/maven/repo</url>
+      <url>http://ouroboros.dyndns-free.com/artifactory/repo</url>
     </repository>
     <repository>  <!-- clojure, clojure-contrib: nightly -->
       <id>clojure-releases</id>
@@ -51,7 +51,7 @@
   <pluginRepositories>
     <pluginRepository>
       <id>ouroboros</id>
-      <url>http://ouroboros.dyndns-free.com/maven/repo</url>
+      <url>http://ouroboros.dyndns-free.com/artifactory/repo</url>
     </pluginRepository>
   </pluginRepositories>
 
