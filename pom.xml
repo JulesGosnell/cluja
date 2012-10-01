@@ -280,7 +280,7 @@
 		    maxmemory="2g"
 		    >
                   <arg value="${project.basedir}/target/cluja-${project.version}-uber.jar"/>
-                  <arg value="${cuda.jar}"/>
+                  <arg value="${project.basedir}/target/${cuda.jar}"/>
                 </java>
                 <java
 		    dir="${rootbeer.dir}"
